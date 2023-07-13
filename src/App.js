@@ -1,4 +1,4 @@
-//import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+//import {Route, Routes} from "react-router-dom";
 import Header from "./components/Header";
 //import Footer from "./components/Footer";
 import {useState , useEffect}  from 'react';
@@ -86,8 +86,8 @@ function App() {
   return (
     <div className="container">
        <Header showAdd={showAddTask} onAdd={() => setShowAddTask(!showAddTask)} title="Task Tracker"/>
-      {showAddTask && <AddTask onAdd={addTask}/>}
-         {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask}/> : 'No Tasks To Show  '}
+       {showAddTask && <AddTask onAdd={addTask}/>}
+       {tasks.length > 0 ? <Tasks tasks={tasks} onToggle={toggleReminder} onDelete={deleteTask}/> : 'No Tasks To Show  '}
     
   </div>
     
